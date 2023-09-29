@@ -9,10 +9,12 @@ export default async function List() {
     <div className="list-bg">
       {result.map((element, index) => {
         return (
-          <div className="list-item" key={index}>
-            <h4>{element.title}</h4>
-            <p>{element.content}</p>
-          </div>
+          <Link href={`/detail/${element._id}`}>
+            <div className="list-item" key={index}>
+              <h4>{element.title}</h4>
+              <p>{element.content}</p>
+            </div>
+          </Link>
         );
       })}
     </div>
